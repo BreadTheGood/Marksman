@@ -1,5 +1,7 @@
 using System.Media;
 
+
+
 namespace Marksman
 {
     public partial class window : Form
@@ -17,6 +19,10 @@ namespace Marksman
         public window()
         {
             InitializeComponent();
+
+            
+
+            //Cursor.Current = new Cursor(@"C:\Users\NSX\source\repos\Marksman\Marksman\bin\Assets\cursor.cur");
 
             // initial rounded form
             System.Drawing.Drawing2D.GraphicsPath gp = new System.Drawing.Drawing2D.GraphicsPath();
@@ -119,6 +125,11 @@ namespace Marksman
             label4.Text = "Missed = " + missed;
 
             label1.Text = "Puntos = " + puntos.ToString();
+
+            //sound
+
+            SoundPlayer shot = new SoundPlayer(@"C:\Users\NSX\source\repos\Marksman\Marksman\bin\Assets\shot.wav");
+            shot.Play();
         }
     }
 }
