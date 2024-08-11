@@ -30,12 +30,14 @@ namespace Marksman
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(window));
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
             pictureBox1 = new PictureBox();
+            timer1 = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -45,9 +47,9 @@ namespace Marksman
             label1.Font = new Font("Digital-7 Mono", 20F, FontStyle.Bold);
             label1.Location = new Point(12, 23);
             label1.Name = "label1";
-            label1.Size = new Size(245, 40);
+            label1.Size = new Size(226, 40);
             label1.TabIndex = 0;
-            label1.Text = "Puntos = 100";
+            label1.Text = "Puntos = 30";
             // 
             // label2
             // 
@@ -99,6 +101,12 @@ namespace Marksman
             pictureBox1.Click += pictureBox1_Click;
             pictureBox1.MouseDown += pictureBox1_MouseDown;
             pictureBox1.MouseUp += pictureBox1_MouseUp;
+            // 
+            // timer1
+            // 
+            timer1.Enabled = true;
+            timer1.Interval = 1000;
+            timer1.Tick += timer1_Tick_1;
             // 
             // window
             // 
