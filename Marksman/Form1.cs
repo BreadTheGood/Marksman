@@ -1,4 +1,10 @@
 using System.Media;
+using System.Numerics;
+using System.Security.Policy;
+using WMPLib;
+using System.Timers;
+
+
 
 
 
@@ -6,6 +12,7 @@ namespace Marksman
 {
     public partial class window : Form
     {
+        
         
 
         // variables
@@ -18,11 +25,43 @@ namespace Marksman
         double acc = 0;
 
         double oks = 0;
+
+
+
+        System.Windows.Forms.Timer timer1;
+        int counter = 56;        
+        public void timer1_Tick(object sender, EventArgs e)
+        {
+            counter--;
+            if (counter == 0)
+            {
+                BGM();
+
+                timer1.Stop();
+            }               
+            
+        }
+
+        public void BGM()
+        {
+            WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
+            wplayer.URL = @"C:\Users\NSX\source\repos\Marksman\Marksman\bin\Assets\soundtrack.mp3";
+            wplayer.controls.play();
+
+            timer1 = new System.Windows.Forms.Timer();
+            timer1.Tick += new EventHandler(timer1_Tick);
+            timer1.Interval = 1000; // 1 second
+            timer1.Start();
+
+        }
         public window()
         {
-            InitializeComponent();            
+            InitializeComponent();
 
-            Cursor.Current = new Cursor(@"C:\Users\NSX\source\repos\Marksman\Marksman\bin\Assets\cursor.cur");
+            BGM();         
+                      
+                    
+            //Cursor.Current = new Cursor(@"C:\Users\NSX\source\repos\Marksman\Marksman\bin\Assets\cursor.cur");
 
             // initial rounded form
             System.Drawing.Drawing2D.GraphicsPath gp = new System.Drawing.Drawing2D.GraphicsPath();
@@ -30,14 +69,18 @@ namespace Marksman
             Region rg = new Region(gp);
             pictureBox1.Region = rg;
 
+            
+
         }
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
+
             //shot sound
 
-            SoundPlayer shot = new SoundPlayer(@"C:\Users\NSX\source\repos\Marksman\Marksman\bin\Assets\shot.wav");
-            shot.Play();
-
+            WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
+            wplayer.URL = @"C:\Users\NSX\source\repos\Marksman\Marksman\bin\Assets\shot.wav";
+            wplayer.controls.play();          
+                       
             //hide target
             pictureBox1.Visible = false;
 
