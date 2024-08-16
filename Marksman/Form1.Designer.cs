@@ -47,7 +47,7 @@ namespace Marksman
             label1.Font = new Font("Digital-7 Mono", 20F, FontStyle.Bold);
             label1.Location = new Point(12, 23);
             label1.Name = "label1";
-            label1.Size = new Size(226, 40);
+            label1.Size = new Size(155, 28);
             label1.TabIndex = 0;
             label1.Text = "Puntos = 30";
             // 
@@ -57,7 +57,7 @@ namespace Marksman
             label2.Font = new Font("Digital-7 Mono", 20F, FontStyle.Bold);
             label2.Location = new Point(12, 93);
             label2.Name = "label2";
-            label2.Size = new Size(303, 40);
+            label2.Size = new Size(207, 28);
             label2.TabIndex = 1;
             label2.Text = "Accuracy = 100%";
             // 
@@ -67,7 +67,7 @@ namespace Marksman
             label3.Font = new Font("Digital-7 Mono", 20F, FontStyle.Bold);
             label3.Location = new Point(1659, 9);
             label3.Name = "label3";
-            label3.Size = new Size(188, 40);
+            label3.Size = new Size(129, 28);
             label3.TabIndex = 2;
             label3.Text = "tries = 0";
             // 
@@ -77,7 +77,7 @@ namespace Marksman
             label4.Font = new Font("Digital-7 Mono", 20F, FontStyle.Bold);
             label4.Location = new Point(1640, 93);
             label4.Name = "label4";
-            label4.Size = new Size(206, 40);
+            label4.Size = new Size(142, 28);
             label4.TabIndex = 3;
             label4.Text = "Missed = 0";
             label4.Click += label4_Click;
@@ -110,13 +110,13 @@ namespace Marksman
             // 
             // window
             // 
-            AutoScaleDimensions = new SizeF(9F, 19F);
+            AutoScaleDimensions = new SizeF(6F, 13F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             BackColor = SystemColors.ActiveCaption;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1878, 944);
+            ClientSize = new Size(1370, 749);
             Controls.Add(pictureBox1);
             Controls.Add(label4);
             Controls.Add(label3);

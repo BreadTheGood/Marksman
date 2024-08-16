@@ -29,7 +29,7 @@ namespace Marksman
        
         System.Windows.Forms.Timer timer1;
         int counter = 56;
-        int counter2 = 0;
+        int counter2 = 0;   
         public void timer1_Tick_1(object sender, EventArgs e)
         {
             counter--;
@@ -67,12 +67,13 @@ namespace Marksman
 
 
         }                
-        public void BGM()
+        private void BGM()
         {
-            WMPLib.WindowsMediaPlayer wplayer = new WMPLib.WindowsMediaPlayer();
-            wplayer.URL = @"C:\Users\NSX\source\repos\Marksman\Marksman\bin\Assets\soundtrack.mp3";
-            wplayer.controls.play();
-            wplayer.settings.volume = 100;
+            WMPLib.WindowsMediaPlayer BGMplayer = new WMPLib.WindowsMediaPlayer();
+            BGMplayer.URL = @"C:\Users\NSX\source\repos\Marksman\Marksman\bin\Assets\soundtrack.mp3";
+            BGMplayer.settings.volume = 300;
+            BGMplayer.controls.play();
+            
             
         }
         public window()
