@@ -167,11 +167,11 @@ namespace Marksman
             int num3 = rnd.Next(1, 3);
             if (num3 == 1)
             {
-                pictureBox1.BackgroundImage = Image.FromFile(@"C:\Users\NSX\source\repos\Marksman\Marksman\bin\Assets\sphere3.png");
+                pictureBox1.BackgroundImage = Image.FromFile(@"C:\Users\NSX\source\repos\Marksman\Marksman\Assets\sphere3.png");
             }
             else
             {
-                pictureBox1.BackgroundImage = Image.FromFile(@"C:\Users\NSX\source\repos\Marksman\Marksman\bin\Assets\sphere 2.png");
+                pictureBox1.BackgroundImage = Image.FromFile(@"C:\Users\NSX\source\repos\Marksman\Marksman\Assets\sphere 2.png");
             }
             //relocating delay
             System.Threading.Thread.Sleep(100);

@@ -85,7 +85,7 @@ namespace Marksman
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.BackgroundImage = Properties.Resources.sphere_2;
+            pictureBox1.BackgroundImage = Image.FromFile(@"C:\Users\NSX\source\repos\Marksman\Marksman\Assets\sphere 2.png");
             pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox1.Location = new Point(727, 410);
             pictureBox1.MaximumSize = new Size(100, 100);
